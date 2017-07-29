@@ -4,17 +4,35 @@ var app = new Vue({
   data: {
     hangmanWord: words[Math.round(Math.random()*(words.length-1))]
   }
-})
+});
+
+var app2 = new Vue({
+el: 'app-2',
+data: {
+  message: 'hangman'
+}
+
+});
+
+
+
+
+
+
+
+
+/*})
 $(document).ready(function(){
 var getWord = function getWord (){
-  var newWord = document.getElementById("userInput").value; // TODO co z ".value"?
+  var newWord = document.getElementById("userInput").value;
   //console.log(newWord);
   var newArray = newWord.split("");
   for (i=0 ; i< newArray.length; i++) {
     $('body').append('<div class="letter">kurczak</div>');
-    //console.log(newArray.length);
+
   }
 };
 
 $(".startGame").on("click", getWord);
 });
+*/
