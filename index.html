@@ -31,7 +31,11 @@
   </div>
   <div class="col-sm-7">
     <h1 id="app">{{ hangmanWord }}</h1>
-    <h1 id="app-2"><p>{{ message }}</p>
+    <h1 id="app-2"><p> {{contaningArray}}</p>
+      <ol>
+        <li v-for= 'leters in contaningArray'></li>
+      </ol>
+      <button v-on:click="splitArray()">Split Array </button>
         <input v-model="message"></h1>
       </div>
 
