@@ -31,12 +31,12 @@
   </div>
   <div class="col-sm-7">
     <h1 id="app">{{ hangmanWord }}</h1>
-    <h1 id="app-2"><p> {{contaningArray}}</p>
+    <h1 id="app-2"><p></p>
       <ol>
-        <li v-for= 'leters in contaningArray'></li>
+        <li v-for= 'letter in contaningArray'>{{cover.firstPosition}}</li>
       </ol>
-      <button v-on:click="splitArray()">Split Array </button>
-        <input v-model="message"></h1>
+      <button v-on:click="splitArray()">Dodaj litere </button>
+        <input type="text" v-model="userLetter"></h1>
       </div>
 
 
