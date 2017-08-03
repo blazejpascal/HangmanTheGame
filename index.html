@@ -9,31 +9,32 @@
  <body class="row">
   <div class="col-sm-5">
     <div class="row">
-      <div class="col-sm-4">
-        <div class = "gallows">
+        <div class="col-sm-4">
+        <div id="3" class = "gallows">
         </div>
-        <div class = "gallows">
+        <div id="2" class = "gallows">
         </div>
-        <div class = "gallows">
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class = "gallows">
+        <div id="1" class = "gallows" >
         </div>
       </div>
       <div class="col-sm-4">
-        <div class = "gallows">
+        <div id="4" class = "gallows">
         </div>
-        <div class = "gallows">
+      </div>
+      <div class="col-sm-4">
+        <div id="5" class = "gallows">
+        </div>
+        <div id="6" class = "gallows">
         </div>
       </div>
     </div>
   </div>
   <div class="col-sm-7">
-    <h1 id="app">{{ hangmanWord }}</h1>
+    <!--<h1 id="app">{{ hangmanWord }}</h1>-->
+    <h1 id="app">Hangman</h1>
     <h1 id="app-2"><p></p>
       <ol>
-        <li v-for= 'letter in contaningArray'>{{cover.firstPosition}}</li>
+        <li v-for= 'letter in contaningArray'>{{letter}}</li>
       </ol>
       <button v-on:click="splitArray()">Dodaj litere </button>
         <input type="text" v-model="userLetter"></h1>

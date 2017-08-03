@@ -2,12 +2,10 @@ var words = ["kartacz","korpuskularny", "robaki", "pomarancze", "kuraczek", "zbo
 var app = new Vue({
   el: '#app',
   data: {
-    hangmanWord: words[Math.round(Math.random()*(words.length-1))]
+    hangmanWord: words[Math.round(Math.random()*(words.length-1))],
 
   },
-  methods: {
 
-  }
 });
 
 var app2 = new Vue({
