@@ -1,44 +1,69 @@
 <!--[if lt IE 9]>
-             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-           <![endif]-->
-           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-           <link rel="stylesheet" href="style.css?v=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css?v=1.0">
 
- </head>
+</head>
 
- <body class="row">
-  <div class="col-sm-5">
-    <div class="row">
-        <div class="col-sm-4">
-        <div id="3" class = "gallows">
+<body class="row">
+  <div class="col-sm-4">
+    <div class="row" id="leftSite">
+      <div class="col-sm-4">
+        <div class="gallows" id="element3" >
+          <div id="rail"></div>
+          <div id="thidrElement"></div>
         </div>
-        <div id="2" class = "gallows">
+        <div class="gallows" id="element2" >
+          <div id="secondElement"></div>
         </div>
-        <div id="1" class = "gallows" >
+        <div class="gallows" id="element1" >
+          <div id="base"></div>
+        </div>
+      </div>
+      <div class="col-sm-4" >
+        <div class="gallows" id="element4">
+          <div id="forthElement"></div>
         </div>
       </div>
       <div class="col-sm-4">
-        <div id="4" class = "gallows">
+        <div class="gallows" id="element5">
+          <div id="rail2"></div>
+          <div id="fifthElement"></div>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div id="5" class = "gallows">
-        </div>
-        <div id="6" class = "gallows">
+        <div class="gallows" id="element6">
+          <div id="sixthElement">
+            <div id="head">
+              <div id="you">You</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-7">
+  <div class="col-sm-8">
     <!--<h1 id="app">{{ hangmanWord }}</h1>-->
-    <h1 id="app">Hangman</h1>
+
+    <h1 id="app">
+
+      <button class="wordsInput" v-on:click="addFrom()">Load New Word </button>
+      <div class="usedLetter">You used those letters : </div>
+    </h1>
     <h1 id="app-2"><p></p>
-      <ol>
-        <li v-for= 'letter in contaningArray'>{{letter}}</li>
-      </ol>
+      <!--<ol>
+      <li v-for= 'letter in contaningArray'>{{letter}}</li>
+    </ol>-->
+
+
+    <div v-for= 'letter in contaningArray'>
+
+      <div v-html="emptyBox"></div>
+    </div>
+
+
       <button v-on:click="splitArray()">Dodaj litere </button>
-        <input type="text" v-model="userLetter"></h1>
-      </div>
+      <input type="text" v-model="userLetter"></h1>
+    </div>
 
 
 
@@ -47,11 +72,10 @@
 
 
 
-<script src="https://unpkg.com/vue"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-                       <script src="script.js"></script>
-
- </body>
-</html>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+  </html>

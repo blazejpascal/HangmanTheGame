@@ -4,17 +4,91 @@
 	height: 15vw;
   margin: 5px;
 	background-color: orange;
-
 }
+
 .gallows {
   width: 100%;
 	height: 50px;
-  border: 2px solid black;
+  opacity:0.0;
+
 }
+
 h1 {
   width: 100%;
   text-align: center;
 }
+
 .col-sm-4 {
   padding: 0;
+}
+
+#leftSite {
+  background: #d1d1d1;
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-right: 20px;
+  }
+
+#base {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+#secondElement {
+  height: 50px;
+  width: 15px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+#thidrElement {
+  height: 50px;
+  width: 15px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+#rail {
+  float:right;
+  margin: 0 auto;
+  height:15px;
+  width: 50%;
+  background-color: red;
+}
+
+#forthElement {
+  margin: 0 auto;
+  height:15px;
+  width: 100%;
+  background-color: red;
+}
+
+#rail2 {
+  float:left;
+  margin: 0 auto;
+  height:15px;
+  width: 50%;
+  background-color: red;
+}
+#fifthElement {
+  margin: 0 auto;
+  height: 50px;
+  width: 15px;
+  background-color: red;
+}
+
+#head {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+#you {
+  color:white;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-top: 10px
 }

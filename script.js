@@ -1,12 +1,20 @@
 var words = ["kartacz","korpuskularny", "robaki", "pomarancze", "kuraczek", "zborze"];
+
 var app = new Vue({
   el: '#app',
   data: {
-    hangmanWord: words[Math.round(Math.random()*(words.length-1))]
-
+    hangmanWord: words[Math.round(Math.random()*(words.length-1))],
+    userWord: ""
   },
-  methods: {
 
+  methods: {
+    addFrom: function() {
+      location.reload();
+    },
+    addWord: function() {
+      this.hangmanWord = this.userWord ;
+      console.log("im working why im not printing");
+    }
   }
 });
 
@@ -15,11 +23,15 @@ var app2 = new Vue({
   data: {
     contaningArray: app.hangmanWord.split(""),//TODO jak stworzyc tablece
     userLetter: "",
-    gallowNumber: 1
+    gallowNumber: 0,
+    emptyBox: '<div class="emptyBoxes">  </div>',
   },
+
   methods: {
     splitArray: function() {
       var letterGuessed = false;
+      var isOver = false;
+      var usedLetter=[];
       for(var i = 0; i< this.contaningArray.length; i++) {
         if (this.userLetter == app.hangmanWord[i]) {
           letterGuessed = true;
@@ -28,48 +40,32 @@ var app2 = new Vue({
       }
       this.userLetter = "";
       if (!letterGuessed) {
-        //  document.querySelector('.col-sm-4:nth-child(' + this.gallow.column + ') .gallows:nth-child(' + this.gallow.row + ')').style.backgroundColor = 'orange';
-        //$("#" + this.gallowNumber).css("background-color", "orange");
-        //document.querySelector("#" + this.gallowNumber).style.backgroundColor = "red";
-        if (this.gallowNumber < 7)
-          document.getElementById(this.gallowNumber).style.backgroundColor = "red";
-        this.gallowNumber++;
-        if (this.gallowNumber >= 8) {
-          alert("Game Over");
-          location.reload();
-        }
-      }
+        //usedLetter.push(this.userLetter);
+        console.log(this.userLetter);
 
+        if (this.gallowNumber <= 5) {
+          this.gallowNumber++;
+          document.getElementById("element" + this.gallowNumber).style.opacity = "1";
+          console.log(this.gallowNumber);
+        }
+
+        if ( this.gallowNumber == 6) {
+          document.getElementById("element" +this.gallowNumber).style.opacity = "1";
+          isOver = true;
+          console.log(isOver);
+        }
+        if (isOver == true) {
+          setTimeout(function(){ alert("game over"); }, 500);
+          }
+      }
     }
-  }
+          }
 
 });
 
 //app2.contaningArray.forEach((elem, index, array)=>{app2.contaningArray[index] = 'X';});
 $(document).ready(function(){
   for(var i=0; i<app2.contaningArray.length; i++) {
-    app2.contaningArray.splice(i, 1, 'X');
+    app2.contaningArray.splice(i, 1, "X");
   }
 });
-
-
-
-
-
-
-
-/*})
-$(document).ready(function(){
-var getWord = function getWord (){
-var newWord = document.getElementById("userInput").value;
-//console.log(newWord);
-var newArray = newWord.split("");
-for (i=0 ; i< newArray.length; i++) {
-$('body').append('<div class="letter">kurczak</div>');
-
-}
-};
-
-$(".startGame").on("click", getWord);
-});
-*/
