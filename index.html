@@ -6,76 +6,92 @@
 
 </head>
 
-<body class="row">
-  <div class="col-sm-4">
-    <div class="row" id="leftSite">
-      <div class="col-sm-4">
-        <div class="gallows" id="element3" >
-          <div id="rail"></div>
-          <div id="thidrElement"></div>
+<body id="body">
+  <div class="row" id='title'>
+    <div class="col-sm-4">
+      <h1 class="logoTrial">
+  <span class="char1">H</span>
+  <span class="char2">a</span>
+  <span class="char3">n</span>
+  <span class="char4">g</span>
+  <span class="char5">m</span>
+  <span class="char6">a</span>
+  <span class="char7">n</span>
+  <span class="char8"></span>
+  <span class="char9">t</span>
+  <span class="char10">h</span>
+  <span class="char11">e</span>
+  <span class="char12"></span>
+  <span class="char13">G</span>
+  <span class="char14">a</span>
+  <span class="char15">m</span>
+  <span class="char16">e</span>
+  </h1>
+    </div>
+    <div class="col-sm-8">
+    </div>
+  </div>
+  <!-- -->
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="row" id="leftSite">
+        <div class="col-sm-4">
+          <div class="gallows" id="element3" >
+            <div id="rail"></div>
+            <div id="thidrElement"></div>
+          </div>
+          <div class="gallows" id="element2" >
+            <div id="secondElement"></div>
+          </div>
+          <div class="gallows" id="element1" >
+            <div id="base"></div>
+          </div>
         </div>
-        <div class="gallows" id="element2" >
-          <div id="secondElement"></div>
+        <div class="col-sm-4" >
+          <div class="gallows" id="element4">
+            <div id="forthElement"></div>
+          </div>
         </div>
-        <div class="gallows" id="element1" >
-          <div id="base"></div>
-        </div>
-      </div>
-      <div class="col-sm-4" >
-        <div class="gallows" id="element4">
-          <div id="forthElement"></div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="gallows" id="element5">
-          <div id="rail2"></div>
-          <div id="fifthElement"></div>
-        </div>
-        <div class="gallows" id="element6">
-          <div id="sixthElement">
-            <div id="head">
-              <div id="you">You</div>
+        <div class="col-sm-4">
+          <div class="gallows" id="element5">
+            <div id="rail2"></div>
+            <div id="fifthElement"></div>
+          </div>
+          <div class="gallows" id="element6">
+            <div id="sixthElement">
+              <div id="head">
+                <div id="you">You</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="col-sm-4">
+      <div id="app2">
+        <div class="hangmanLetters" v-for= 'letter in contaningArray'>
+          {{letter}}
+        </div>
+        <div id="input">
+          <input type="text" v-model="userLetter">
+        </div>
+        <div>
+          <button id="button" v-on:click="splitArray(), findX()">Dodaj litere </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div id="app3">
+        <div class="usedLetter">You Used:</div>
+        <div class="usedLetterArray" v-for= 'letter in letterArray'>{{letter}} </div>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-8">
-    <!--<h1 id="app">{{ hangmanWord }}</h1>-->
-
-    <h1 id="app">
-
-      <button class="wordsInput" v-on:click="addFrom()">Load New Word </button>
-      <div class="usedLetter">You used those letters : </div>
-    </h1>
-    <h1 id="app-2"><p></p>
-      <!--<ol>
-      <li v-for= 'letter in contaningArray'>{{letter}}</li>
-    </ol>-->
-
-
-    <div v-for= 'letter in contaningArray'>
-
-      <div v-html="emptyBox"></div>
-    </div>
-
-
-      <button v-on:click="splitArray()">Dodaj litere </button>
-      <input type="text" v-model="userLetter"></h1>
-    </div>
-
-
-
-
-
-
-
-
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  </body>
-  </html>
+  <script src="jquery.lettering-0.6.min.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

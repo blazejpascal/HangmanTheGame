@@ -1,3 +1,78 @@
+#body{
+background: linear-gradient(#005A31, #CBE32D);
+}
+
+.logoTrial span {
+  font: 30px Monaco, MonoSpace;
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+  margin-left: 170px;
+  margin-top:20px;
+}
+.char1 { transform: rotate(-42deg); }
+.char2 { transform: rotate(-36deg); }
+.char3 { transform: rotate(-30deg); }
+.char4 { transform: rotate(-24deg); }
+.char5 { transform: rotate(-18deg); }
+.char6 { transform: rotate(-12deg); }
+.char7 { transform: rotate(-6deg); }
+.char8 { transform: rotate(-0deg); }
+.char9 { transform: rotate(6deg); }
+.char10 { transform: rotate(12deg); }
+.char11 { transform: rotate(18deg); }
+.char12 { transform: rotate(24deg);}
+.char13 { transform: rotate(30deg); }
+.char14 { transform: rotate(36deg); }
+.char15 { transform: rotate(42deg); }
+.char16 { transform: rotate(48deg); }
+
+#logo {
+  height: 150px;
+  width: 150px;
+  margin:50px;
+
+}
+.header p{
+
+  margin-top: 50px;
+  margin: 0 auto;
+  font-size: 45px;
+}
+
+#title{
+  height: 100px;
+}
+#app2 {
+  margin-top: 5px;
+}
+.hangmanLetters {
+  font-size: 70px;
+}
+
+#app3{
+
+    font-size: 40px;
+    border: 2px, solid , #CBE32D;
+    display: inline;
+}
+
+#button {
+
+margin-top: 20px;
+border-radius: 4px;
+font-family: "Open Sans Regular", Helvetica, sans-serif ;
+font-size: 12px;
+color: #21b3ac;
+}
+
+.header div{
+  margin-bottom: 20px;
+}
+
 .letter {
   display: inline-block;
 	width: 15vw;
@@ -17,13 +92,13 @@ h1 {
   width: 100%;
   text-align: center;
 }
-
 .col-sm-4 {
-  padding: 0;
+  padding: 0px;
 }
 
 #leftSite {
-  background: #d1d1d1;
+  border-radius: 15px;
+  
   margin-left: 20px;
   margin-top: 50px;
   margin-right: 20px;
@@ -32,21 +107,21 @@ h1 {
 #base {
   width: 100px;
   height: 50px;
-  background-color: red;
+  background-color: #CBE32D;
   margin: 0 auto;
 }
 
 #secondElement {
   height: 50px;
   width: 15px;
-  background-color: red;
+  background-color: #CBE32D;
   margin: 0 auto;
 }
 
 #thidrElement {
   height: 50px;
   width: 15px;
-  background-color: red;
+  background-color: #CBE32D;
   margin: 0 auto;
 }
 
@@ -55,14 +130,14 @@ h1 {
   margin: 0 auto;
   height:15px;
   width: 50%;
-  background-color: red;
+  background-color: #CBE32D;
 }
 
 #forthElement {
   margin: 0 auto;
   height:15px;
   width: 100%;
-  background-color: red;
+  background-color: #CBE32D;
 }
 
 #rail2 {
@@ -70,17 +145,17 @@ h1 {
   margin: 0 auto;
   height:15px;
   width: 50%;
-  background-color: red;
+  background-color: #CBE32D;
 }
 #fifthElement {
   margin: 0 auto;
   height: 50px;
   width: 15px;
-  background-color: red;
+  background-color: #CBE32D;
 }
 
 #head {
-  background-color: red;
+  background-color: #CBE32D;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -91,4 +166,11 @@ h1 {
   margin: 0 auto;
   padding-left: 10px;
   padding-top: 10px
+}
+
+.hangmanLetters {
+  display: inline;
+}
+.usedLetterArray {
+  display: inline;
 }
